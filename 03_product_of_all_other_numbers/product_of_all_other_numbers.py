@@ -3,9 +3,21 @@ Input: a List of integers
 Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
-    # Your code here
+    # prod = 1
+    # for i in arr:
+    #     prod = prod * i
+    # return [prod/i for i in arr]
 
-    pass
+    # # Accounting for 0 in a list:
+    out = []
+    for i in range(len(arr)):
+        prod = 1
+        for j, x in enumerate(arr):
+            if j != i:
+                prod = prod * x
+        out.append(prod)
+    return out
+        
 
 
 if __name__ == '__main__':
