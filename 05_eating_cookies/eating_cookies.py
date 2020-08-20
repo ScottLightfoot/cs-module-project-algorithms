@@ -1,11 +1,14 @@
 '''
 Input: an integer
 Returns: an integer
+1 2 4 7 13 24
 '''
 def eating_cookies(n):
-    # Your code here
+    derp = [1, 1, 2]
+    while len(derp) <= n:
+        derp.append(sum(derp[-3:]))
 
-    pass
+    return derp[abs(n)]
 
 if __name__ == "__main__":
     # Use the main function here to test out your implementation
